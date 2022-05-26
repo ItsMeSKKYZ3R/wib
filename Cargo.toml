@@ -1,0 +1,11 @@
+[package]
+name = "wib"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = "2"
+walkdir = "2"
+file-size = "1"
+thiserror = "1"
+colored = "2"
