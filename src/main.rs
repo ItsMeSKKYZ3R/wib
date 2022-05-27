@@ -91,13 +91,11 @@ fn exec(options: Options) -> Result<(), Box<dyn Error>> {
     let mut total_numbers: u32 = 0;
     let mut tops: Vec<Entry> = Vec::with_capacity(options.nums + 1);
     let mut min_of_tops = 0;
+    let dir: PathBuf = get_dir();
 
     #[cfg(target_os = "windows")]
-    let dir: PathBuf = get_dir();
     let dir: &str = dir.to_str().unwrap_or(".\\");
 
-    #[cfg(not(target_os = "windows"))]
-    let dir: PathBuf = get_dir();
     #[cfg(not(target_os = "windows"))]
     let dir: &str = dir.to_str().unwrap_or("./");
 
